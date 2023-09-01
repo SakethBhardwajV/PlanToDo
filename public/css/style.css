@@ -1,0 +1,145 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    background-color: blueviolet;
+    margin: 0 25rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+hr {
+    margin: 0 1rem;
+    border-top: white solid 1px;
+    border-radius: 50%;
+}
+
+h1 {
+    margin: 1.5rem 0;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 3rem;
+}
+
+/* -------------------------------Nav Bar Section------------------------------- */
+
+.navbar {
+    padding: 1rem;
+    border-radius: 15px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+#title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+}
+
+.pages {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.page-item {
+    background-color: rgb(253, 251, 249, 0.3);
+    padding: 10px 20px; /* sorttt */
+    /* border: white solid 1px; */
+    border-radius: 10px;
+}
+
+
+/* -----------------------------------------Main Section-------------------------------- */
+
+.hero {
+    background-color: rgb(253, 251, 249, 0.3);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.message {
+    line-height: 150%;
+}
+
+.taskList {
+    padding: 1rem;
+}
+
+.taskList-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date {
+    letter-spacing: 0.5rem;
+}
+
+.taskList hr {
+    margin: 1rem 0;
+    border-radius: 0;
+}
+
+.task-box {
+    background-color: rgb(253, 251, 249, 0.3);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type=checkbox]:checked + p {
+    text-decoration: line-through;
+}
+
+/* --------------------------------------------Form------------------------------------------ */
+
+form {
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+form > input[type=text] {
+    text-align: center;
+    height: 3rem;
+    width: 40rem;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+form > button {
+    color: white;
+    background-color: rgb(253, 251, 249, 0.3);
+    text-align: center;
+    height: 3rem;
+    width: 40rem;
+    border: 2px dashed white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+

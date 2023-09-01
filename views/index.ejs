@@ -1,0 +1,56 @@
+<%- include("partials/header.ejs"); %>
+
+<div class="hero">
+    <h1> <%= listName %> </h1>
+
+    <% if (locals.listName === "Daily List") { %>
+        <p class="message">Unleash Your Potential! 🌟 Did you know that completing tasks releases dopamine, the 'feel-good' neurotransmitter? Each checkmark is a step towards a happier you! ✅💥</p>
+        <p class="message">Conquer the Day! 🚀 Embrace the Power of Productivity ✅ Crush Your To-Do List and Celebrate Every Victory 🎉💪</p>
+    <% } else { %>
+        <p class="message">Fuel Your Progress with the Magic of To-Do Lists! 📝✨ Did You Know? Writing down your tasks can improve memory retention, making you more likely to remember and complete your goals. Organize, Achieve, Elevate. 🌟</p>
+        <p class="message">'Success is not final, failure is not fatal: It is the courage to continue that counts.' <br />– Winston Churchill 💪🌈"</p>
+    <% } %>
+</div>
+
+
+<div class="taskList">
+    <div class="taskList-header">
+        <h2>Tasks</h2>
+
+        <% if (locals.listName === "Daily List") { %>
+            <% const date = new Date(); 
+            const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+            const today = date.getDate() + " " + monthNames[date.getMonth()] + " " + date.getFullYear(); %>
+
+            <p class="date"><%=today%></p>
+        <% } %>
+    </div>
+
+    <hr />
+
+    
+    <% if(locals.listItems) { %>
+        <% for (let i=0; i < locals.listItems.length; i++) { %>
+            <div class="task-box">
+                <input id="check" type="checkbox">
+                <p>
+                    <%= listItems[i] %>
+                </p>
+            </div>
+        <% } %>
+    <% } %>
+    
+
+</div>
+
+<form action="/" method="POST">
+    <input type="text" id="inputText" name="inputText" placeholder="Write a Task" autocomplete="off"/>
+    <button type="submit" name="type" value=<%= listName %>>+ Add</button>
+</form>
+
+
+
+<%- include("partials/footer.ejs"); %>
+
+
+   
